@@ -26,10 +26,6 @@ scss/_*.scss
 
 tmp/
 tmp/*
-code.html
-contact.html
-faq.html
-index.html
-prospectus.html
-sessions.html
-sponsors.html
+
+#Ingore compiled files in root directory
+/*.html
