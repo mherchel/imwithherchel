@@ -395,7 +395,7 @@ a {
   transition: .2s color;
   text-decoration: none; }
 
-img {
+img, svg {
   max-width: 100%;
   height: auto; }
 
@@ -795,16 +795,6 @@ blockquote {
   background-color: #353A47;
   background-position: center;
   background-size: cover; }
-  @media (min-width: 650px) {
-    .footer {
-      background-image: url(../../assets/images/footer-bg-mid.jpg);
-      padding-top: 75px; } }
-  @media (min-width: 1100px) {
-    .footer {
-      background-image: url(../../assets/images/footer-bg-full.jpg); } }
-  @media (min-width: 1600px) {
-    .footer {
-      padding-top: 125px; } }
   .footer:before {
     content: "";
     position: absolute;
@@ -893,56 +883,6 @@ blockquote {
       fill: rgba(255, 255, 255, 0.75);
       transition: fill .2s; }
 
-.footer-button--volunteer {
-  position: relative;
-  padding-left: 45px; }
-  @media (min-width: 1600px) {
-    .footer-button--volunteer {
-      padding-left: 70px; } }
-  .footer-button--volunteer:before {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 0;
-    height: 20px;
-    width: 20px;
-    background-image: url(../../assets/images/icon-face.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    top: 50%;
-    transform: translateY(-50%); }
-    @media (min-width: 1600px) {
-      .footer-button--volunteer:before {
-        left: 25px;
-        height: 25px;
-        width: 25px; } }
-
-.footer-button--faq {
-  position: relative;
-  padding-left: 45px; }
-  @media (min-width: 1600px) {
-    .footer-button--faq {
-      padding-left: 70px; } }
-  .footer-button--faq:before {
-    content: "";
-    position: absolute;
-    left: 15px;
-    top: 0;
-    height: 20px;
-    width: 20px;
-    background-image: url(../../assets/images/icon-help.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    top: 50%;
-    transform: translateY(-50%); }
-    @media (min-width: 1600px) {
-      .footer-button--faq:before {
-        left: 25px;
-        height: 25px;
-        width: 25px; } }
-
 /**
  * Header
  */
@@ -965,10 +905,18 @@ blockquote {
               backface-visibility: hidden; } }
   .header.js-scrolled {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1); }
-  .header svg {
+  .header .logo {
     width: auto;
-    height: 60px;
+    max-height: 60px;
     margin: 5px; }
+
+@media (min-width: 1220px) {
+  .logo-small {
+    display: none; } }
+
+@media (max-width: 1220px) {
+  .logo-full {
+    display: none; } }
 
 /**
  * Hero
@@ -977,8 +925,10 @@ blockquote {
   clear: both;
   background: #1e457c;
   color: white;
-  height: 700px;
   position: relative; }
+  @media (min-width: 900px) {
+    .hero {
+      height: 700px; } }
   .hero h1 {
     font-weight: normal;
     font-size: 40px; }
@@ -988,21 +938,21 @@ blockquote {
     opacity: 0.7; }
 
 .hero-button {
-  position: absolute;
-  margin: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 5%;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
   background: #E53838;
   letter-spacing: 0.2em; }
-  @media (min-width: 480px) {
-    .hero-button {
-      line-height: 75px;
-      padding: 0 50px;
-      bottom: 10%; } }
   @media (min-width: 650px) {
     .hero-button {
-      bottom: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      line-height: 75px;
+      width: auto;
+      padding: 0 50px;
+      margin: 0;
+      position: absolute;
       top: calc(100% - 37px); } }
   @media (min-width: 1600px) {
     .hero-button {
@@ -1012,36 +962,51 @@ blockquote {
 
 .hero-content {
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media (min-width: 900px) {
+    .hero-content {
+      -ms-flex-direction: row;
+          flex-direction: row; } }
 
 .hero-content--first {
   position: relative;
-  width: 50%;
-  overflow: hidden;
-  height: 400px; }
+  overflow: hidden; }
+  @media (min-width: 900px) {
+    .hero-content--first {
+      width: 50%;
+      height: 400px; } }
   .hero-content--first img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    min-width: 100%;
-    min-height: 100%; }
+    width: 100%; }
+    @media (min-width: 900px) {
+      .hero-content--first img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%; } }
 
 .hero-content--second {
-  position: relative;
-  width: 50%;
-  background: #E53838; }
+  position: relative; }
+  @media (min-width: 900px) {
+    .hero-content--second {
+      width: 50%;
+      background: #E53838; } }
   .hero-content--second h2 {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    font-size: 50px;
     opacity: 1;
-    font-weight: bold;
-    text-align: center;
-    margin: 0; }
+    text-align: center; }
+    @media (min-width: 900px) {
+      .hero-content--second h2 {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0; } }
 
 /**
  * Location section
@@ -1161,8 +1126,8 @@ blockquote {
 
 .nav-menu-icon {
   position: fixed;
-  right: 5px;
-  top: 5px;
+  right: 10px;
+  top: 10px;
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -1178,9 +1143,18 @@ blockquote {
   @media (min-width: 900px) {
     .nav-menu-icon {
       display: none; } }
+  .nav-menu-icon svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: 35px; }
+  .nav-menu-icon path {
+    fill: #E53838; }
   .nav-menu-icon.js-nav-active {
     background: #E53838; }
-    .nav-menu-icon.js-nav-active svg path {
+    .nav-menu-icon.js-nav-active path {
       fill: white; }
 
 .menu {
@@ -1192,13 +1166,12 @@ blockquote {
   max-width: 350px;
   margin: 0;
   padding: 0;
-  z-index: -1;
-  perspective: 500px;
-  transition: z-index .2s;
-  transition-delay: .4s; }
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+  transition: opacity .3s; }
   @media (min-width: 900px) {
     .menu {
-      perspective: none;
       background: transparent;
       position: static;
       display: -ms-flexbox;
@@ -1208,14 +1181,18 @@ blockquote {
       top: auto;
       left: auto;
       transform: translate(0, 0);
-      z-index: 100; } }
+      z-index: 100;
+      opacity: 1; } }
   @media (max-device-height: 500px) {
     .menu {
       margin-top: 30px; } }
   .menu.js-nav-active {
     z-index: 100;
     transition: none;
-    transition-delay: 0; }
+    transition-delay: 0;
+    opacity: 1;
+    pointer-events: auto;
+    display: block; }
 
 .menu-item {
   position: relative;
@@ -1224,12 +1201,8 @@ blockquote {
   text-align: center;
   padding: 0;
   margin: 0 0 15px 0;
-  transform: rotatex(120deg);
-  transform-style: preserve-3d;
-  transition: transform .5s;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  transition-timing-function: cubic-bezier(0.6, -0.47, 0.42, 1.4); }
+          backface-visibility: hidden; }
   @media (min-width: 900px) {
     .menu-item {
       float: left;
@@ -1253,14 +1226,6 @@ blockquote {
         display: none; } }
   .menu-item.right-padding:before {
     width: 200%; }
-  .js-nav-active .menu-item {
-    transform: rotate(0);
-    transition: transform 0.2s .js-nav-active .menu-item; }
-    .js-nav-active .menu-item :hover {
-      transform: rotatex(45deg); }
-      @media (min-width: 900px) {
-        .js-nav-active .menu-item :hover {
-          transform: rotate(0); } }
 
 .menu-item-link {
   position: relative;
@@ -1291,8 +1256,10 @@ blockquote {
     background: #3272CE;
     color: white;
     padding: 0 40px;
-    border-left: solid 1px white;
     transition: all .3s; }
+    @media (min-width: 900px) {
+      .donate .menu-item-link {
+        border-left: solid 1px white; } }
     .donate .menu-item-link:hover, .donate .menu-item-link:focus {
       background: #1e457c; }
   @media (min-height: 500px) and (max-width: 900px) {
