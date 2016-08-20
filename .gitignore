@@ -1,11 +1,6 @@
 # Ignore Mac files
 .DS_Store
 
-# Ignore compiled assets
-assets/images/*
-assets/javascripts/*
-assets/stylesheets/*
-
 # Ignore output css
 css/*.map
 
@@ -26,6 +21,3 @@ scss/_*.scss
 
 tmp/
 tmp/*
-
-#Ingore compiled files in root directory
-/*.html
