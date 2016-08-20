@@ -72,6 +72,7 @@ $nav-break: $tablet_wide;
     max-width: none;
     @include center(none);
     z-index: 100;
+    pointer-events: auto;
     opacity: 1;
   }
 
