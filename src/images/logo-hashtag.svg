@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="280px" height="248px" viewBox="0.002 0 280 248"
+	 overflow="visible" enable-background="new 0.002 0 280 248" xml:space="preserve">
+<defs>
+</defs>
+<polyline fill="#E53838" points="133.119,101.463 75.322,39.613 0.002,39.613 0.002,216.718 75.104,216.718 75.104,129.079 
+	90.967,144.856 "/>
+<polygon fill="#E53838" points="190.438,128.381 190.438,216.718 266.236,216.718 266.236,50.769 "/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="113.499" y1="164.0381" x2="275.4993" y2="-1.9622">
+	<stop  offset="0.184" style="stop-color:#E53838"/>
+	<stop  offset="0.7607" style="stop-color:#3272CE"/>
+</linearGradient>
+<polygon fill="url(#SVGID_1_)" points="280.35,119.868 280.324,0 149.797,0.045 192.033,38.812 90.967,144.856 133.119,186.783 
+	237.289,80.347 "/>
+<text transform="matrix(1 0 0 1 0 248.2583)" fill="#3272CE" font-family="'Gotham-Bold'" font-size="32.3062">#ImWithHerchel</text>
+</svg>

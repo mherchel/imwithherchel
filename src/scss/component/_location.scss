@@ -1,0 +1,93 @@
+/**
+ * Location section
+ */
+
+.location {
+  padding: 50px 0 0 0;
+}
+
+.location-banner {
+  @include breakpoint($tablet_narrow) {
+    float: left;
+  }
+}
+.location-address {
+  @include breakpoint($tablet_narrow) {
+    float: left;
+    clear: left;
+    max-width: 60%;
+  }
+}
+.location-button {
+  @include icon('icon-pin.svg');
+  position: relative;
+  z-index: 20;
+  @include breakpoint($tablet_narrow) {
+    float: right;
+  }
+}
+.map {
+  position: relative;
+  clear: both;
+  height: 0;
+  padding-top: 500px;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+  @include breakpoint($tablet_wide) {
+    padding-top: 50%;
+  }
+  @include breakpoint($wide) {
+    padding-top: 40%;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    border-right: 100vw solid transparent;
+    border-top: 25px solid $off-white;
+    z-index: 10;
+    @include breakpoint($tablet_narrow) {
+      border-top: 50px solid $off-white;
+    }
+    @include breakpoint($wide) {
+      border-top: 100px solid $off-white;
+    }
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    border-right: 100vw solid transparent;
+    border-bottom: 25px solid $off-white;
+    z-index: 10;
+    @include breakpoint($tablet_narrow) {
+      border-bottom: 50px solid $off-white;
+    }
+    @include breakpoint($wide) {
+      border-bottom: 100px solid $off-white;
+    }
+  }
+  iframe {
+    position: absolute;
+    @include center;
+  }
+}
+.map-cover {
+  background: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  &.js-selected {
+    pointer-events: none;
+  }
+}

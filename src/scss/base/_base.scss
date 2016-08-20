@@ -1,0 +1,46 @@
+/**
+ * Base styles
+ */
+
+* {
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+*::selection {
+  color: white;
+  background: rgba($gray, 80%);
+}
+body {
+  margin: 0;
+  line-height: 1.4;
+  overflow-x: hidden;
+  color: $gray;
+  background-color: $off-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-family: $font-sans;
+  @media (min-device-height: $fixed-header-height) {
+    margin: $header-height-small 0 0 0; // Room for fixed header
+  }
+  @media (min-device-height: $fixed-header-height) and (min-width: $smartphone_wide) {
+    margin: $header-height 0 0 0; // Room for fixed header
+  }
+}
+a {
+  transition: .2s color;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.clearfix {
+  @include clearfix;
+}
+section {
+  clear: both;
+}

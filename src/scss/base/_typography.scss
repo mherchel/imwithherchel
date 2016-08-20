@@ -1,0 +1,144 @@
+/**
+ * Typography
+ */
+
+p {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+blockquote {
+  font-family: $font-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 45px;
+  line-height: 1.1;
+  @include breakpoint($normal) {
+    font-size: 60px;
+  }
+  a {
+    color: inherit;
+    transition: color .2s;
+  }
+}
+h2 {
+  font-size: 40px;
+  line-height: 1.2;
+  a {
+    color: inherit;
+    transition: color .2s;
+  }
+}
+h3 {
+  font-size: 27px;
+  line-height: 1.2;
+  text-transform: none;
+  margin: 0 0 10px 0;
+  a {
+    color: inherit;
+    transition: color .2s;
+  }
+}
+h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  a {
+    color: inherit;
+    transition: color .2s;
+  }
+}
+ul {
+  font-size: 1.1em; // Fix font rendering in Chrome on Windows 10
+}
+blockquote {
+  position: relative;
+  font-size: 30px;
+  &:before {
+    position: absolute;
+    right: calc(100% + 10px);
+    top: 0;
+    content: "“";
+    font-size: 70px;
+    line-height: 1.1;
+  }
+}
+%banner,
+.banner {
+  font-family: $font-sans;
+  position: relative;
+  margin: 0 0 25px 0;
+  padding: 0 10px;
+  display: inline-block;
+  background: $gray;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  color: white;
+  @include breakpoint($tablet_narrow) {
+    margin-bottom: 10px;
+  }
+  @include breakpoint($wide) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  &:after {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-bottom: 30px solid transparent;
+    border-left: 30px*0.4 solid $gray;
+    @include breakpoint($wide) {
+      border-bottom: 32px solid transparent;
+      border-left: 32px*0.4 solid $gray;
+    }
+  }
+}
+%button,
+.button {
+  display: inline-block;
+  background: $red;
+  color: white;
+  font-size: 22px;
+  letter-spacing: .10em;
+  margin: 25px 0;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  transition: background .2s;
+  &:hover {
+    background: darken($red, 10%);
+  }
+  @include breakpoint($smartphone_wide) {
+    line-height:  55px;
+    padding: 0 25px;
+  }
+  @include breakpoint($wide) {
+    font-size: 35px;
+    line-height: 75px;
+    padding: 0 55px;
+  }
+  .content & {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+  &.medium {
+    line-height: 45px;
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  &.right {
+    @include breakpoint($normal) {
+      float: right;
+    }
+  }
+}
