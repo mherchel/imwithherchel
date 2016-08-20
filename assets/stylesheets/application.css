@@ -1182,6 +1182,7 @@ blockquote {
       left: auto;
       transform: translate(0, 0);
       z-index: 100;
+      pointer-events: auto;
       opacity: 1; } }
   @media (max-device-height: 500px) {
     .menu {
