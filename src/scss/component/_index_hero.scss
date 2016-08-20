@@ -1,0 +1,79 @@
+/**
+ * Hero
+ */
+
+.hero {
+  clear: both;
+  background: $blue-dark;
+  color: white;
+  height: 600px;
+  position: relative;
+
+  h1 {
+    font-weight: normal;
+    font-size: 40px;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 20px;
+    opacity: 0.7;
+  }
+}
+
+.hero-button {
+  position: absolute;
+  margin: 0;
+  @include center(x);
+  bottom: 5%;
+  background: $red;
+  letter-spacing: 0.2em;
+  @include breakpoint($smartphone_wide) {
+    line-height: 75px;
+    padding: 0 50px;
+    bottom: 10%;
+  }
+  @include breakpoint($tablet_narrow) {
+    bottom: auto;
+    top: calc(100% - 37px)
+  }
+  @include breakpoint($wide) {
+    line-height: 100px;
+    padding: 0 75px;
+    top: calc(100% - 50px);
+  }
+}
+
+.hero-content {
+  display: flex;
+}
+
+.hero-content--first {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  height: 300px;
+
+  img {
+    position: absolute;
+    @include center;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+.hero-content--second {
+  position: relative;
+  width: 50%;
+  background: $red;
+
+  h2 {
+    @include center;
+    position: absolute;
+    font-size: 50px;
+    opacity: 1;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+  }
+}

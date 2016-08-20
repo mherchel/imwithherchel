@@ -3,7 +3,9 @@
 //
 
 $off-white: #f4f4f4;
-$red: #F62D4F;
+$red: #E53838;
+$blue: #3272CE;
+$blue-dark: darken($blue, 20%);
 $gray: #353A47;
 $gray-light: #DBDEE0;
 
@@ -12,7 +14,7 @@ $gray-light: #DBDEE0;
 //
 
 $font-sans: futura, helvetica, arial, sans-serif;
-$font-serif: 'pt_serifregular', serif;
+$font-serif: futura, helvetica, arial, sans-serif;
 
 $header-height: 80px;
 $header-height-small: 60px;

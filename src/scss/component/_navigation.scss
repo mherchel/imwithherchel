@@ -33,16 +33,6 @@ $nav-break: $tablet_wide;
       fill: white;
     }
   }
-  svg {
-    @include center;
-    position: absolute;
-    width: 70%;
-    height: 70%;
-    path {
-      fill: $red;
-      transition: fill .2s;
-    }
-  }
 }
 .menu {
   @include center;
@@ -146,9 +136,15 @@ $nav-break: $tablet_wide;
     padding: 0 25px;
     transition: line-height .2s;
     .js-scrolled & {
-      line-height: $header-height-small; 
+      line-height: $header-height-small;
     }
   }
+  &.donate {
+    background: $red;
+    color: white;
+    padding: 0 40px;
+  }
+
   // Adjust line height based on screen height
   @media (min-height: 500px) and (max-width: $nav-break) {
     line-height: 55px;
