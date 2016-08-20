@@ -11,16 +11,7 @@
   background-color: $gray;
   background-position: center;
   background-size: cover;
-  @include breakpoint($tablet_narrow) {
-    background-image: url(../../assets/images/footer-bg-mid.jpg);
-    padding-top: 75px; // Accomodate pseudo element
-  }
-  @include breakpoint($normal) {
-    background-image: url(../../assets/images/footer-bg-full.jpg);
-  }
-  @include breakpoint($wide) {
-    padding-top: 125px; // Accomodate pseudo element
-  }
+
   &:before {
     content: "";
     position: absolute;
@@ -30,6 +21,7 @@
     height: 100%;
     background: rgba(35, 38, 47, 0.95);
   }
+
   &:after {
     content: "";
     position: absolute;
@@ -40,28 +32,34 @@
     border-left: 100vw solid transparent;
     border-top: 25px solid $off-white;
     z-index: 10;
+
     @include breakpoint($tablet_narrow) {
       border-top: 50px solid $off-white;
     }
+
     @include breakpoint($wide) {
       border-top: 100px solid $off-white;
     }
   }
+
   .button {
     margin-top: 30px;
   }
 }
+
 .footer-first,
 .footer-second {
   position: relative;
   color: white;
   text-align: center;
   z-index: 5;
+
   @include breakpoint($tablet_wide) {
     font-size: 24px;
     width: 50%;
     float: left;
   }
+
   p {
     font-size: inherit;
     @include breakpoint($normal_wide) {
@@ -70,6 +68,7 @@
   }
 }
 
+
 .footer-bottom {
   clear: both;
   position: relative;
@@ -77,12 +76,15 @@
   text-align: center;
   z-index: 5;
   padding: 40px 0 40px 0;
+
   @include breakpoint($tablet_wide) {
     font-size: 18px;
   }
+
   p {
     padding: 0;
   }
+
   a {
     color: inherit;
     text-decoration: underline;
@@ -90,38 +92,40 @@
       text-decoration: none;
     }
   }
+
   .social {
     clear: both;
     display: block;
     margin: 0 auto;
     list-style: none;
+
     @include breakpoint($tablet_wide) {
       max-width: 85%;
     }
+
     li {
       display: inline-block;
       margin: 0;
+
       @include breakpoint($tablet_wide) {
         margin: 0 20px;
       }
     }
+
     a {
       display: block;
       padding: 20px;  // Larger tap target
+
       &:hover path,
       &:focus path {
         fill: white;
       }
+
     }
+
     path {
       fill: rgba(#ffffff, 0.75);
       transition: fill .2s;
     }
   }
-}
-.footer-button--volunteer {
-  @include icon('icon-face.svg', 20px);
-}
-.footer-button--faq {
-  @include icon('icon-help.svg', 20px);
 }

@@ -1,13 +1,17 @@
 /**
  * Hero
  */
+$hero-break: $tablet_wide;
 
 .hero {
   clear: both;
   background: $blue-dark;
   color: white;
-  height: 700px;
   position: relative;
+
+  @include breakpoint($hero-break) {
+    height: 700px;
+  }
 
   h1 {
     font-weight: normal;
@@ -22,19 +26,20 @@
 }
 
 .hero-button {
-  position: absolute;
-  margin: 0;
-  @include center(x);
-  bottom: 5%;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
   background: $red;
   letter-spacing: 0.2em;
-  @include breakpoint($smartphone_wide) {
-    line-height: 75px;
-    padding: 0 50px;
-    bottom: 10%;
-  }
+
   @include breakpoint($tablet_narrow) {
-    bottom: auto;
+    @include center(x);
+    line-height: 75px;
+    width: auto;
+    padding: 0 50px;
+    margin: 0;
+    position: absolute;
     top: calc(100% - 37px)
   }
   @include breakpoint($wide) {
@@ -46,34 +51,52 @@
 
 .hero-content {
   display: flex;
+  flex-direction: column;
+
+  @include breakpoint($hero-break) {
+    flex-direction: row;
+  }
 }
 
 .hero-content--first {
   position: relative;
-  width: 50%;
   overflow: hidden;
-  height: 400px;
+
+  @include breakpoint($hero-break) {
+    width: 50%;
+    height: 400px;
+  }
 
   img {
-    position: absolute;
-    @include center;
     width: 100%;
-    min-width: 100%;
-    min-height: 100%;
+
+    @include breakpoint($hero-break) {
+      position: absolute;
+      @include center;
+      min-width: 100%;
+      min-height: 100%;
+    }
   }
 }
 .hero-content--second {
   position: relative;
-  width: 50%;
-  background: $red;
+
+  @include breakpoint($hero-break) {
+    width: 50%;
+    background: $red;
+  }
 
   h2 {
-    @include center;
-    position: absolute;
-    font-size: 50px;
     opacity: 1;
-    font-weight: bold;
     text-align: center;
-    margin: 0;
+
+    @include breakpoint($hero-break) {
+      @include center;
+      position: absolute;
+      font-size: 50px;
+      font-weight: bold;
+      text-align: center;
+      margin: 0;
+    }
   }
 }

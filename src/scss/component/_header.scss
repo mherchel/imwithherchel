@@ -2,6 +2,8 @@
  * Header
  */
 
+$logo-break: 1220px;
+
 .header {
   @include clearfix;
   background: white;
@@ -20,10 +22,21 @@
     box-shadow: 0 0 20px 0 rgba(0,0,0,.10);
   }
 
-  svg {
+  .logo { // SVG
     width: auto;
-    height: 60px;
+    max-height: 60px;
     margin: 5px;
   }
 }
 
+.logo-small {
+  @include breakpoint($logo-break) {
+    display: none;
+  }
+}
+
+.logo-full {
+  @include breakpoint(max-width $logo-break) {
+    display: none;
+  }
+}
