@@ -45,6 +45,20 @@ img, svg {
   display: block;
   max-width: 100%;
   height: auto;
+
+  &.pull-right {
+    margin: 20px auto;
+
+    @include breakpoint($tablet_narrow) {
+      float: right;
+      max-width: 300px;
+      margin: 20px 0 20px 20px;
+    }
+
+    @include breakpoint($tablet_narrow) {
+      max-width: 400px;
+    }
+  }
 }
 
 .clearfix {
