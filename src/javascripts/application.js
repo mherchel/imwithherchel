@@ -23,9 +23,6 @@ function removeNav() {
 }
 
 window.onload = function() {
-  if (mapCover) {
-    mapCover.addEventListener( 'click' , enableMapMove );
-  }
 
   if (navIcon) {
     navIcon.addEventListener('click', toggleNav);
