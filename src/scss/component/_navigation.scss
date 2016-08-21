@@ -19,8 +19,9 @@ $nav-break: $tablet_wide;
   background: white;
   color: white;
   z-index: 100;
-  outline:  none;
-  transition: background-color .2s;
+  border: none;
+  transition: all .2s;
+  cursor: pointer;
 
   @include breakpoint($smartphone_wide) {
     right: 15px;
@@ -43,12 +44,17 @@ $nav-break: $tablet_wide;
     fill: $red;
   }
 
+  &:focus,
   &.js-nav-active {
     background: $red;
 
     path {
       fill: white;
     }
+  }
+
+  .js-scrolled & {
+    top: 5px;
   }
 }
 
@@ -107,9 +113,6 @@ $nav-break: $tablet_wide;
     transform: none;
     background: transparent;
 
-
-
-
     &:last-child a:before {
       display: none;
     }
@@ -128,10 +131,11 @@ $nav-break: $tablet_wide;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 50px;
+  transition: all .2s;
 
+  &:hover,
   &:focus {
-    background: white;
-    color: $red;
+    background: $red-dark;
   }
 
 
