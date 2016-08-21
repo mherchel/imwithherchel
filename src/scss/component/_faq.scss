@@ -1,0 +1,13 @@
+/*
+ * FAQ
+ */
+
+.copy-faq {
+  h2 {
+    margin: 40px 0 20px;
+
+    @include breakpoint($normal) {
+      margin-top: 60px;
+    }
+  }
+}
