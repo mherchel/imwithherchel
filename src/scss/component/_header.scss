@@ -8,9 +8,12 @@ $logo-break: 1220px;
   @include clearfix;
   background: white;
   max-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 
-  // Do not fix the header unless the device has a minimum height
-  @media (min-device-height: $fixed-header-height) {
+  @include breakpoint($tablet_narrow) {
     position: fixed;
     left: 0;
     top: 0;

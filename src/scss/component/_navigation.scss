@@ -44,8 +44,7 @@ $nav-break: $tablet_wide;
     fill: $red;
   }
 
-  &:focus,
-  &.js-nav-active {
+  &:focus {
     background: $red;
 
     path {
@@ -53,9 +52,29 @@ $nav-break: $tablet_wide;
     }
   }
 
-  .js-scrolled & {
-    top: 5px;
-    height: 45px;
+  // Turn into a X when active
+  &.js-nav-active {
+    background: $red;
+
+    svg {
+      display: none;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      width: 35px;
+      height: 5px;
+      background: white;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
   }
 }
 
