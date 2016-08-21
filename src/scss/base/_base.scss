@@ -17,7 +17,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 70px 0 0 0; // Room for fixed header
   line-height: 1.4;
   overflow-x: hidden;
   color: $gray;
@@ -27,12 +27,8 @@ body {
   font-smoothing: antialiased;
   font-family: $font-sans;
 
-  @media (min-device-height: $fixed-header-height) {
-    margin: $header-height-small 0 0 0; // Room for fixed header
-  }
-
-  @media (min-device-height: $fixed-header-height) and (min-width: $smartphone_wide) {
-    margin: $header-height 0 0 0; // Room for fixed header
+  @include breakpoint($tablet_narrow) {
+    margin: 70 0 0 0; // Room for fixed header
   }
 }
 
