@@ -1014,7 +1014,8 @@ blockquote {
     .nav-menu-icon:focus path, .nav-menu-icon.js-nav-active path {
       fill: white; }
   .js-scrolled .nav-menu-icon {
-    top: 5px; }
+    top: 5px;
+    height: 45px; }
 
 .menu {
   left: 50%;
