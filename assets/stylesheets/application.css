@@ -398,6 +398,26 @@ img, svg {
   display: block;
   max-width: 100%;
   height: auto; }
+  img.pull-left, svg.pull-left {
+    margin: 20px auto; }
+    @media (min-width: 650px) {
+      img.pull-left, svg.pull-left {
+        float: left;
+        max-width: 300px;
+        margin: 20px 20px 20px 0; } }
+    @media (min-width: 650px) {
+      img.pull-left, svg.pull-left {
+        max-width: 400px; } }
+  img.pull-right, svg.pull-right {
+    margin: 20px auto; }
+    @media (min-width: 650px) {
+      img.pull-right, svg.pull-right {
+        float: right;
+        max-width: 300px;
+        margin: 20px 0 20px 20px; } }
+    @media (min-width: 650px) {
+      img.pull-right, svg.pull-right {
+        max-width: 400px; } }
 
 .clearfix:before, .clearfix:after {
   content: "";
