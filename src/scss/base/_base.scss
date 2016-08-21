@@ -27,6 +27,7 @@ body {
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-family: $font-sans;
+
   @media (min-device-height: $fixed-header-height) {
     margin: $header-height-small 0 0 0; // Room for fixed header
   }
@@ -34,7 +35,6 @@ body {
   @media (min-device-height: $fixed-header-height) and (min-width: $smartphone_wide) {
     margin: $header-height 0 0 0; // Room for fixed header
   }
-
 }
 
 a {
@@ -54,4 +54,3 @@ img, svg {
 section {
   clear: both;
 }
-
