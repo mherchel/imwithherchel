@@ -1,0 +1,15 @@
+/*
+ * Utility Classes
+ */
+
+.u-hide-mobile {
+  @include breakpoint($tablet_wide) {
+    display: none;
+  }
+}
+
+.u-hide-desktop {
+  @include breakpoint($tablet_wide) {
+    display: none;
+  }
+}
