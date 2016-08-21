@@ -13,9 +13,11 @@
   background: black;
   z-index: 50;
   transition: opacity .2s;
+
   &.js-active {
     display: block;
     opacity: 0.8;
+
     @include breakpoint($nav-break) {
       display: none; // Should never show at non-mobile widths
     }

@@ -7,9 +7,11 @@
   margin: 0 auto;
   padding: 0;
   width: 100%;
+
   @include breakpoint($tablet_narrow) {
     margin-top: 100px;
   }
+
   @include breakpoint($tablet_wide) {
     background-image: url(/src/images/mountain.jpg);
     background-repeat: no-repeat;
@@ -18,9 +20,11 @@
     width: 94%;
     overflow: hidden;
   }
+
   @include breakpoint($normal) {
     background-size: contain;
   }
+
   .copy {
     padding: 50px 20px;
     width: 100%;
@@ -28,14 +32,17 @@
     color: white;
     background: $red;
     font-size: 18px;
+
     @include breakpoint($tablet_wide) {
       position: relative;
       padding: 50px 10px 50px 50px;
       width: 49%;
     }
+
     @include breakpoint($wide) {
       font-size: 24px;
     }
+
     &:after {
       content: '';
       position: absolute;
@@ -47,6 +54,7 @@
       border-style: solid;
       border-width: 25px 100vw 0 0;
       border-color: $red transparent transparent transparent;
+
       @include breakpoint($tablet_wide) { // CSS border arrows won't scale to dynamic content. Move to skewed box.
         top: 0;
         left: auto;
@@ -58,25 +66,31 @@
         border: none;
       }
     }
+
     .copy-content {
       position: relative;
       z-index: 10;
     }
+
     h1 {
       margin-top: 0;
+
       @include breakpoint($tablet_wide) {
         margin-right: -20px;
       }
     }
+
     p {
       font-size: inherit;
       &:last-child {
         margin-bottom: 0;
       }
     }
+
     li {
       font-size: 22px;
     }
+
     a {
       color: white;
       text-decoration: underline;
