@@ -1,1 +1,57 @@
-// Platform Placeholder
+/**
+ * Platform
+ */
+
+.platform-copy {
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($tablet_wide) {
+    column-count: 2;
+  }
+}
+
+.platform-item {
+  padding: 5px 0;
+}
+
+.platform-item--inner {
+  margin: 0;
+  border: 2px solid #ccc;
+  background-color: #fcfcfc;
+  padding: 40px;
+  break-inside: avoid;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: #fff;
+  }
+
+  h2 {
+    margin: 0 0 20px;
+  }
+
+  blockquote {
+    margin-right: 0;
+  }
+}
+
+.platform-button--inner {
+  background-color: $blue;
+  color: white;
+  padding: 20px 40px;
+  transition: background-color .3s;
+
+  .button {
+    background: $blue-dark;
+    border: 0;
+    padding: 20px 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    transition: all .2s;
+
+    &:hover {
+      background: darken($blue-dark, 5%);
+    }
+  }
+}

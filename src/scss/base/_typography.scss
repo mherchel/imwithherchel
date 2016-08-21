@@ -65,18 +65,26 @@ ul {
 }
 
 blockquote {
-  position: relative;
+  @include beginquote($blue, 0.3, 90%);
   font-size: 30px;
+  color: $blue;
+  margin: 60px 30px;
 
-  &:before {
-    position: absolute;
-    right: calc(100% + 10px);
-    top: 0;
-    content: "“";
-    font-size: 70px;
-    line-height: 1.1;
+  p {
+    font-size: inherit;
+  }
+
+  @include breakpoint($tablet_narrow) {
+    @include beginquote($blue, 1, 102%);
+    margin: 60px 120px 60px 60px;
   }
 }
+
+
+// Banner variables
+$banner-color: $red;
+$banner-line-height-small: 30px;
+$banner-line-height-large: 70px;
 
 %banner,
 .banner {
@@ -85,21 +93,22 @@ blockquote {
   margin: 0 0 25px 0;
   padding: 0 10px;
   display: inline-block;
-  background: $gray;
-  font-size: 14px;
-  line-height: 30px;
+  background: $banner-color;
+  font-size: 16px;
+  line-height: $banner-line-height-small;
   letter-spacing: .10em;
   text-transform: uppercase;
   color: white;
 
   @include breakpoint($tablet_narrow) {
     margin-bottom: 10px;
+    padding: 0 20px;
   }
 
 
-  @include breakpoint($wide) {
-    font-size: 22px;
-    line-height: 32px;
+  @include breakpoint($normal) {
+    font-size: 40px;
+    line-height: $banner-line-height-large;
   }
 
   &:after {
@@ -109,12 +118,12 @@ blockquote {
     position: absolute;
     top: 0;
     left: 100%;
-    border-bottom: 30px solid transparent;
-    border-left: 30px*0.4 solid $gray;
+    border-bottom: $banner-line-height-small solid transparent;
+    border-left: $banner-line-height-small*0.4 solid $banner-color;
 
-    @include breakpoint($wide) {
-      border-bottom: 32px solid transparent;
-      border-left: 32px*0.4 solid $gray;
+    @include breakpoint($normal) {
+      border-bottom: $banner-line-height-large solid transparent;
+      border-left: $banner-line-height-large*0.4 solid $banner-color;
     }
   }
 }
