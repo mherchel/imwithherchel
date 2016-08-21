@@ -90,7 +90,6 @@ $hero-break: $tablet_wide;
     position: relative;
     opacity: 1;
     text-align: center;
-    white-space: nowrap;
 
     @include breakpoint($hero-break) {
       @include center;
