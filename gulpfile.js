@@ -112,3 +112,8 @@ gulp.task('watch', function() {
   // Watch any files in assets/, reload on change
   gulp.watch(['.assets/**/*']).on('change', livereload.changed);
 });
+
+// Build for Deploy
+gulp.task('build', function() {
+  gulp.start('fileinclude', 'sass', 'js', 'images');
+});
