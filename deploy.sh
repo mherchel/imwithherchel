@@ -8,3 +8,4 @@ git add .
 git commit -m "Assets"
 git push origin gh-pages
 git checkout master
+gulp build
